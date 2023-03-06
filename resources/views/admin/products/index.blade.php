@@ -59,6 +59,7 @@
                                 <th class="border-top-0">Stock</th>
                                 <th class="border-top-0">Price</th>
                                 <th class="border-top-0">Description</th>
+                                <th class="border-top-0">Image</th>
                                 <th class="border-top-0">Delete</th>
                                 <th class="border-top-0">Edit</th>
                             </tr>
@@ -82,6 +83,9 @@
                                     <label class="badge bg-success">{{$item->stock}}</label>
                                 </td>
                                 <td>{{$item->description}}</td>
+                                <td>
+                                    <img src="{{ asset('/images/'.$item->image) }}" alt="Product Image" class="img-fluid rounded" style="max-width: 110px; max-height: 110px;">
+                                </td>
                                 <td>
                                     <a href="{{ route("products.destroy",$item->id) }}" class="badge bg-danger text-white"><i class="mdi mdi-delete-empty m-r-5 m-l-5"></i>delete</a>
                                 </td>

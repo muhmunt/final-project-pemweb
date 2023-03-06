@@ -22,7 +22,7 @@
     <div class="row">
         <div class="card">
             <div class="card-body">
-                <form method="POST" action="{{ route("products.store") }}" class="form-horizontal form-material mx-2">
+                <form method="POST" action="{{ route("products.store") }}" class="form-horizontal form-material mx-2" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label class="col-md-12">Name</label>
@@ -42,6 +42,13 @@
                         <label class="col-md-12">Stock</label>
                         <div class="col-md-12">
                             <input type="number" name="stock" placeholder=""
+                                class="form-control form-control-line">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12">Image</label>
+                        <div class="col-md-12">
+                            <input type="file" name="image" placeholder=""
                                 class="form-control form-control-line">
                         </div>
                     </div>

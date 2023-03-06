@@ -42,5 +42,5 @@ Route::group(['prefix'=>'transaction'], function(){
 Route::group(['prefix'=>'cart'], function(){
     Route::get('/', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
     Route::post('/', [App\Http\Controllers\CartController::class, 'add'])->name('add.to.cart');
-    Route::get('/{id}', [App\Http\Controllers\CartController::class, 'destroy'])->name('cart.destroy');
+    Route::get('/{id}', [App\Http\Controllers\CartController::class, 'delete'])->name('cart_destroy');
 });

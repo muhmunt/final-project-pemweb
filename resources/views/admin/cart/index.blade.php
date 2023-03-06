@@ -77,13 +77,13 @@
                                 <td>{{$item->price}}</td>
                                 <td>
                                     {{$item->quantity}}
-                                    <input type="hidden" name="product_id[]" value="{{ $item->id }}">
+                                    <input type="hidden" name="product_id[]" value="{{ $item->product_id }}">
                                     <input type="hidden" name="quantity[]" value="{{ $item->quantity }}">
                                     <input type="hidden" name="total[]" value="{{ $item->total }}">
                                 </td>
                                 <td>{{$item->total}}</td>
                                 <td>
-                                    <a href="{{ route("cart.destroy",$item->id) }}" class="badge bg-danger text-white"><i class="mdi mdi-delete-empty m-r-5 m-l-5"></i>delete</a>
+                                    <a href="{{ route("cart_destroy",$item->id) }}" class="badge bg-danger text-white"><i class="mdi mdi-delete-empty m-r-5 m-l-5"></i>delete</a>
                                 </td>
                             </tr>
                             @php
